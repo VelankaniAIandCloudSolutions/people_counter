@@ -1,0 +1,10 @@
+MAX_DISAPPEARED = 10
+
+RECORD_VIDEO = False
+RECORD_HEIGHT = 480
+RECORD_WIDTH = 620
+
+DRAW_BB = True
+SHOW_VIDEO = False
+
+OBJECT_DETECTOR = r'./frozen_models/yolov5s.onnx'

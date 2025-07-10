@@ -1,0 +1,21 @@
+{
+    "camera_id": "B1 Main Entry Gate",
+    "src" : "rtsp://admin:Admin123@10.1.68.120:554",
+    "is_file": true,
+
+    "detect_people": true,
+
+    "zones": {
+        "footfall_zones" : [
+            {
+                "zone_id": 1,
+                "name": "Entrance",
+
+                "roi": [777 , 68 , 1414 , 1078],
+                "people_counter_line":515,
+		        "point_for_count": "bottom",
+                "detect_gender": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 p-2 sm:p-4 md:p-8">
+    <!-- Header with Centered Logo -->
+    <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-4 sm:mb-6">
+        <div class="flex flex-col items-center justify-center text-center">
+            <div class="w-32 h-32 mb-4">
+                <img src="https://loyalty.theoterra.com/assets/img/logo-gold-ot.png" alt="Company Logo" class="w-full h-full object-contain">
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800">The Oterra</h1>
+            <p class="text-base text-gray-600">Report generated: 25 January 2025</p>
+        </div>
+    </div>
+
+    <!-- People Count Card -->
+    <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-4 sm:mb-6">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">People Count</h2>
+        <div class="flex flex-wrap items-baseline gap-2 mb-6">
+            <span class="text-4xl font-bold">227</span>
+            <span class="text-red-500 font-semibold text-base">
+                86.64% less
+            </span>
+            <span class="text-gray-600 text-base">than yesterday</span>
+        </div>
+        
+        <div class="overflow-x-auto">
+            <table class="min-w-full">
+                <thead>
+                    <tr class="bg-gray-50">
+                        <th class="px-6 py-3 text-left text-sm font-semibold text-gray-600">Date</th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold text-gray-600">Day</th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold text-gray-600">In</th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold text-gray-600">Out</th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold text-gray-600">Total Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="border-t">
+                        <td class="px-6 py-4 text-sm text-gray-800">25/1</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">Sat</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">81</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">146</td>
+                        <td class="px-6 py-4 text-sm text-gray-800 font-semibold">227</td>
+                    </tr>
+                    
+                    <tr class="border-t">
+                        <td class="px-6 py-4 text-sm text-gray-800">24/1</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">Fri</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">901</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">798</td>
+                        <td class="px-6 py-4 text-sm text-gray-800 font-semibold">1699</td>
+                    </tr>
+                    
+                    <tr class="border-t">
+                        <td class="px-6 py-4 text-sm text-gray-800">23/1</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">Thu</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">1237</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">1130</td>
+                        <td class="px-6 py-4 text-sm text-gray-800 font-semibold">2367</td>
+                    </tr>
+                    
+                    <tr class="border-t">
+                        <td class="px-6 py-4 text-sm text-gray-800">22/1</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">Wed</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">1108</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">927</td>
+                        <td class="px-6 py-4 text-sm text-gray-800 font-semibold">2035</td>
+                    </tr>
+                    
+                    <tr class="border-t">
+                        <td class="px-6 py-4 text-sm text-gray-800">21/1</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">Tue</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">989</td>
+                        <td class="px-6 py-4 text-sm text-gray-800">799</td>
+                        <td class="px-6 py-4 text-sm text-gray-800 font-semibold">1788</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Two Column Layout for Charts and Peak Hours -->
+<div class="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-4 sm:mb-6">
+    <div class="space-y-6">
+        <!-- First Row - Hourly Chart -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Hourly People Count</h2>
+            <div class="chart-container">
+                <canvas id="hourlyChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Second Row - Two Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Left Column - Pie Chart -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">In/Out Ratio</h2>
+                <div class="chart-container">
+                    <canvas id="ratioChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Right Column - Peak Hours -->
+            <div class="space-y-6">
+                <!-- Current Peak Rush Hour -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-6">Peak Rush Hour</h2>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <p class="text-base font-semibold text-gray-600 mb-2">Peak Rush Hour In</p>
+                            <p class="text-3xl font-bold text-blue-600">---</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-base font-semibold text-gray-600 mb-2">Peak Rush Hour Out</p>
+                            <p class="text-3xl font-bold text-blue-600">---</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Yesterday's Peak Rush Hour -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-6">Yesterday's Peak Rush Hour</h2>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <p class="text-base font-semibold text-gray-600 mb-2">Peak Rush Hour In</p>
+                            <p class="text-3xl font-bold text-gray-600">18:00 - 19:00</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-base font-semibold text-gray-600 mb-2">Peak Rush Hour Out</p>
+                            <p class="text-3xl font-bold text-gray-600">21:00 - 22:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        // Charts initialization with template data
+        const ratioCtx = document.getElementById('ratioChart').getContext('2d');
+        new Chart(ratioCtx, {
+            type: 'pie',
+            data: {
+                labels: ['In', 'Out'],
+                datasets: [{
+                    data: [36, 64],
+                    backgroundColor: ['#0088FE', '#FF8042'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+
+        const hourlyCtx = document.getElementById('hourlyChart').getContext('2d');
+        new Chart(hourlyCtx, {
+            type: 'line',
+            data: {
+                labels: ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"],
+                datasets: [
+                    {
+                        label: 'In',
+                        data: [20, 13, 8, 5, 12, 4, 4, 10, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                        borderColor: '#0088FE',
+                        tension: 0.1
+                    },
+                    {
+                        label: 'Out',
+                        data: [43, 11, 13, 9, 11, 12, 9, 23, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                        borderColor: '#FF8042',
+                        tension: 0.1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            maxTicksLimit: 12
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

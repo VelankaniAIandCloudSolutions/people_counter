@@ -1,0 +1,53 @@
+2025-01-24 16:40:27,459 - INFO - Starting report generation for date: 2025-01-23
+2025-01-24 16:40:27,460 - INFO - Report class initialized successfully
+2025-01-24 16:40:27,460 - INFO - Collecting five days data...
+2025-01-24 16:40:27,496 - INFO - Calculating percentage changes...
+2025-01-24 16:40:27,505 - INFO - Collecting hourly data...
+2025-01-24 16:40:27,526 - INFO - Preparing template and generating HTML...
+2025-01-24 16:40:27,533 - INFO - Report successfully generated and saved to reports/Velankani B1_23-Jan-2025.html
+2025-01-24 16:40:27,533 - INFO - Report generated successfully: reports/Velankani B1_23-Jan-2025.html
+2025-01-24 16:40:27,887 - INFO - Daily report sent successfully
+2025-01-24 17:21:17,470 - INFO - Starting report generation for date: 2025-01-23
+2025-01-24 17:21:17,470 - INFO - Report class initialized successfully
+2025-01-24 17:21:17,470 - INFO - Collecting five days data...
+2025-01-24 17:21:17,500 - INFO - Calculating percentage changes...
+2025-01-24 17:21:17,506 - INFO - Collecting hourly data...
+2025-01-24 17:21:17,528 - INFO - Preparing template and generating HTML...
+2025-01-24 17:21:17,542 - INFO - Report successfully generated and saved to reports/Velankani B1_23-Jan-2025.html
+2025-01-24 17:21:17,542 - INFO - Report generated successfully: reports/Velankani B1_23-Jan-2025.html
+2025-01-24 17:21:17,543 - INFO - Preparing daily report email for Velankani B1
+2025-01-24 17:21:17,543 - INFO - Visitor stats - Total: 3097, Previous: 3031, Change: 2.18%
+2025-01-24 17:21:17,543 - INFO - Successfully attached report: reports/Velankani B1_23-Jan-2025.html
+2025-01-24 17:21:17,815 - INFO - Email sent successfully to heet.b@velankanigroup.com
+2025-01-24 17:21:17,816 - INFO - Daily report sent successfully
+2025-01-24 17:37:55,720 - INFO - Starting report generation for date: 2025-01-23
+2025-01-24 17:37:55,720 - INFO - Report class initialized successfully
+2025-01-24 17:37:55,720 - INFO - Collecting five days data...
+2025-01-24 17:37:55,744 - INFO - Calculating percentage changes...
+2025-01-24 17:37:55,751 - INFO - Collecting hourly data...
+2025-01-24 17:37:55,769 - INFO - Preparing template and generating HTML...
+2025-01-24 17:37:55,776 - INFO - Report successfully generated and saved to reports/Velankani B1_23-Jan-2025.html
+2025-01-24 17:37:55,776 - INFO - Report generated successfully: reports/Velankani B1_23-Jan-2025.html
+2025-01-24 17:37:55,776 - INFO - Preparing daily report email for Velankani B1
+2025-01-24 17:37:55,776 - INFO - Visitor stats - Total: 3097, Previous: 3031, Change: 2.18%
+2025-01-24 17:37:55,777 - INFO - Successfully attached report: reports/Velankani B1_23-Jan-2025.html
+2025-01-24 17:37:56,892 - INFO - Email sent successfully to heet.b@velankanigroup.com
+2025-01-24 17:37:56,892 - INFO - Daily report sent successfully
+2025-01-28 09:18:56,074 - INFO - Starting report generation for date: 2025-01-27
+2025-01-28 09:18:56,074 - INFO - Report class initialized successfully
+2025-01-28 09:18:56,074 - INFO - Collecting five days data...
+2025-01-28 09:18:56,083 - ERROR - Error collecting data for date 2025-01-26: list index out of range
+2025-01-28 09:18:56,083 - ERROR - Error generating dashboard: list index out of range
+2025-01-28 09:18:56,083 - ERROR - Error in main function: list index out of range
+2025-01-28 09:24:29,666 - INFO - Starting report generation for date: 2025-01-27
+2025-01-28 09:24:29,666 - INFO - Report class initialized successfully
+2025-01-28 09:24:29,666 - INFO - Collecting five days data...
+2025-01-28 09:24:29,679 - ERROR - Error collecting data for date 2025-01-26: list index out of range
+2025-01-28 09:24:29,679 - ERROR - Error generating dashboard: list index out of range
+2025-01-28 09:24:29,679 - ERROR - Error in main function: list index out of range
+2025-01-28 09:24:35,529 - INFO - Starting report generation for date: 2025-01-27
+2025-01-28 09:24:35,529 - INFO - Report class initialized successfully
+2025-01-28 09:24:35,529 - INFO - Collecting five days data...
+2025-01-28 09:24:35,542 - ERROR - Error collecting data for date 2025-01-26: list index out of range
+2025-01-28 09:24:35,542 - ERROR - Error generating dashboard: list index out of range
+2025-01-28 09:24:35,542 - ERROR - Error in main function: list index out of range

@@ -1,0 +1,21 @@
+{
+    "camera_id": "Ottera Main Entry Gate",
+    "src" : "rtsp://admin:Admin123@10.1.68.37:554",
+    "is_file": true,
+
+    "detect_people": true,
+
+    "zones": {
+        "footfall_zones" : [
+            {
+                "zone_id": 1,
+                "name": "Entrance",
+
+                "roi": [474 , 130 , 1400 , 1077],
+                "people_counter_line":605,
+		        "point_for_count": "bottom",
+                "detect_gender": false
+            }
+        ]
+    }
+}
